@@ -8,4 +8,8 @@
 document.getElementById("enter_button").addEventListener("click", function(){
      document.getElementById("page_one").style.display = "none";
      document.getElementById("page_two").style.display = "block";
+
+//document.getElementById("return_button").addEventListener("click", function(){
+     //document.getElementById("page_two").style.display = "none";
+     //document.getElementById("page_one").style.display = "block";
 });
