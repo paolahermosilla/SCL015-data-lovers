@@ -1,42 +1,59 @@
-body{
-    background-image: url(Pokemon_Wallpaper03.jpg);
+*{
+    padding: 0%;
+    margin: 0 auto;
 }
-.mainBackgraund {
-background-image: url(./pokemon.jpg.jpg);
-background-repeat: no-repeat;
 
+body{
+    background-image: url(img/Pokemon_Wallpaper05.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+#logo img{
+    margin-left: 32%;
+    width: 35%;
+    /*height: 50%;*/
+}
+
+.intro{
+    padding: 2% 10% 3% 10%;
+    display: flex;
 }
 
 .main-text{
-position: absolute;
-width: 748px;
-height: 241px;
-left: 236px;
-top: 423px;
-font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 40px;
-line-height: 47px;
-color: yellow;
-text-shadow: 0 0 0.2em rgb(11, 7, 250), 0 0 0.2em rgb(4, 54, 255),
-        0 0 0.2em rgb(0, 8, 248)
+    /*position: absolute;*/
+    /*width: 55%;
+    height: 100%;*/
+    margin-right: 15%;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 150%;
+    line-height: 175%;
+    color: yellow;
+    text-shadow: 0 0 0.5em rgb(11, 7, 250), 0 0 0.5em rgb(40, 54, 255),
+            0 0 0.5em rgb(0, 8, 248)
 }
 
- .buttonEnter{  
-background: url(btnpokeball.jpg);
-background-repeat: no-repeat;
-position: absolute;
-width: 181px;
-height: 241px;
-left: 1081px;
-top: 456px;
+.button_enter{  
+    background: url(img/btnpokeball.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /*position: absolute;
+    left: 75%;
+    top: 35%;
+    padding: 10%;
+    width: 380px;*/
+    width: 24%;
+    box-shadow: 10px 10px 10px #3B4CCA;
 }
-.footer {
-position: absolute;
-width: 1527px;
-height: 112px;
-left: 0px;
-top: 906px;
-background: #000000;
+
+#footer img{
+    width: 100%;
+    margin-bottom: -7%;
+    /*position: absolute;
+    /*padding-top: 3%;
+    padding-bottom: 5%;
+    background: #000000;*/
 }
