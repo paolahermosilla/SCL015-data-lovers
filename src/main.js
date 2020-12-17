@@ -8,8 +8,11 @@ function pokemonList(){
      let array = data.pokemon;
      let list = "";
      for(let i = 0; i < array.length; i++){  
-          list += array[i].num+": "+array[i].name+". Type: "+array[i].type+". Size: "
-          +array[i].size.height+", "+array[i].size.weight+"."+"<br>";
+          `<div class = "all-card">
+               list += `<img src="${array[i].img}">`+array[i].num+": "+array[i].name+". Type: "+array[i].type+". Size: "
+               +array[i].size.height+", "+array[i].size.weight+"."+"<br>";
+          </div>`;
+
 
           console.log(array[i].name);
           console.log(array[i].type);
