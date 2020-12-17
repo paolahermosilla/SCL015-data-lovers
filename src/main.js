@@ -9,7 +9,7 @@ function pokemonList(){
      let list = "";
      for(let i = 0; i < array.length; i++){  
           `<div class = "all-card">
-               list += `<img src="${array[i].img}">`+array[i].num+": "+array[i].name+". Type: "+array[i].type+". Size: "
+               list += `<img; src="${array[i].img}">`+array[i].num+": "+array[i].name+". Type: "+array[i].type+". Size: "
                +array[i].size.height+", "+array[i].size.weight+"."+"<br>";
           </div>`;
 
