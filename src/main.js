@@ -4,6 +4,40 @@
 
 import data from './data/pokemon/pokemon.js';
 
+function pokemonList(){
+     let array = data.pokemon;
+     let list = "";
+     for(let i = 0; i < array.length; i++){
+               list += `<div class= "cards">
+               <img src="${array[i].img}">
+               <p><span>${array[i].num}</span>: ${array[i].name}</p>
+               <p>Type: ${array[i].type}</p>
+               <p><span>Size: ${array[i].size.height}</span>, ${array[i].size.weight}</p>
+               </div>`
+          
+          //console.log(array[i].name);
+          //console.log(array[i].type);
+          //console.log(array[i].size);
+     }
+
+     return list;
+}
+
+document.getElementById("pokemon_list").innerHTML = pokemonList();
+
+console.log(data.pokemon);
+
+document.getElementById("enter_button").addEventListener("click", function(){
+     document.getElementById("page_one").style.display = "none";
+     document.getElementById("page_two").style.display = "block";
+});
+
+document.getElementById("return_button").addEventListener("click", function(){
+     document.getElementById("page_two").style.display = "none";
+     document.getElementById("page_one").style.display = "block";
+});
+
+
 // const dataPokemon = data.pokemon;
 // const printData = (dataPokemonParameter) => {
 //      listPokemon.innerHTML = "";
@@ -21,34 +55,3 @@ import data from './data/pokemon/pokemon.js';
 //           }) 
 //      }
 // }
-
-function pokemonList(){
-     let array = data.pokemon;
-     let list = "";
-     for(let i = 0; i < array.length; i++){
-          `<div class = "all-card">
-               list += `<img; src="${array[i].img}">`+array[i].num+": "+array[i].name+". Type: "+array[i].type+". Size: "
-               +array[i].size.height+", "+array[i].size.weight+"."+"<br>";
-          </div>`;
-
-          console.log(array[i].name);
-          console.log(array[i].type);
-          console.log(array[i].size);
-     }
-
-     return list;
-}
-
-//document.getElementById("pokemon_list").innerHTML = pokemonList();
-
-console.log(data.pokemon);
-
-document.getElementById("enter_button").addEventListener("click", function(){
-     document.getElementById("page_one").style.display = "none";
-     document.getElementById("page_two").style.display = "block";
-});
-
-document.getElementById("return_button").addEventListener("click", function(){
-     document.getElementById("page_two").style.display = "none";
-     document.getElementById("page_one").style.display = "block";
-});
