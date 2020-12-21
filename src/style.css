@@ -60,6 +60,21 @@
     height: 250px;
     box-shadow: 10px 10px 10px #3B4CCA;
 }
+#search_button{  
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    /*position: absolute;
+    left: 75%;
+    top: 35%;
+    padding: 10%;
+    width: 380px;*/
+    width: 100px;
+    height: 20px;
+    box-shadow: 2px 2px 2px #3B4CCA;
+}
 
 #footer img{
     width: 100%;
@@ -98,7 +113,7 @@
     font-size: 150%;
     line-height: 175%;
     color: yellow;
-    text-shadow: 0 0 0.5em rgb(11, 7, 250), 0 0 0.5em rgb(40, 54, 255),
+    text-shadow: 0 0 0.5em rgb(11, 7, 250), 0 0 0.5em #2836ff,
             0 0 0.5em rgb(0, 8, 248)
 }
 
@@ -125,3 +140,34 @@
     border-radius: 15%;
     width: 10%;
 }
+
+.btnorder1{
+    background-color:#FF0000; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+   
+    font-size: 16px;
+    
+    justify-content: center;
+}
+.btnorder2{
+    background-color:#3B4CCA; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    
+    font-size: 16px;
+    
+    justify-content: center;
+}
+.contenedorBtns{
+    text-align: center;
+}
+
+
+
