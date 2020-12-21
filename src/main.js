@@ -3,7 +3,8 @@
 // import data from './data/rickandmorty/rickandmorty.js';
 
 import data from './data/pokemon/pokemon.js';
-function searchType(){
+
+     function searchType(){
      let array = data.pokemon;
      let x = document.getElementById("typeSelect").value;
    
