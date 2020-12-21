@@ -3,21 +3,19 @@
 // import data from './data/rickandmorty/rickandmorty.js';
 
 import data from './data/pokemon/pokemon.js';
-function searchType(){
-     let array = data.pokemon;
-     let x = document.getElementById("typeSelect").value;
-   
-     for (let i = 0; i < array.length; i++) {
-       if (x === array[i].type) {
-          document.getElementById(array[i].num).style.display = "block";
-   
-       } 
-       }
-   }
-   
 
-function pokemonList(){
-     let array = data.pokemon;
+document.getElementById("enter_button").addEventListener("click", function(){
+     document.getElementById("page_one").style.display = "none";
+     document.getElementById("page_two").style.display = "block";
+});
+
+document.getElementById("return_button").addEventListener("click", function(){
+     document.getElementById("page_two").style.display = "none";
+     document.getElementById("page_one").style.display = "block";
+});
+
+
+function pokemonList(array){
      let list = "";
      for(let i = 0; i < array.length; i++){//agregamos el id para poder identificarlo luego
                list += `<div class= "cards" id="${array[i].num}"> 
@@ -35,40 +33,39 @@ function pokemonList(){
      return list;
 }
 
-document.getElementById("pokemon_list").innerHTML = pokemonList();
+document.getElementById("pokemon_list").innerHTML = pokemonList(data.pokemon);
 
 console.log(data.pokemon);
 
-document.getElementById("enter_button").addEventListener("click", function(){
-     document.getElementById("page_one").style.display = "none";
-     document.getElementById("page_two").style.display = "block";
+
+document.getElementById("orderAZ").addEventListener("click", function(){
+     document.getElementById("pokemon_list").innerHTML = "";
 });
 
-document.getElementById("return_button").addEventListener("click", function(){
-     document.getElementById("page_two").style.display = "none";
-     document.getElementById("page_one").style.display = "block";
+document.getElementById("orderZA").addEventListener("click", function(){
+     document.getElementById("pokemon_list").innerHTML = "";
 });
 
-document.getElementById("typeSelect").addEventListener("change", searchType());
 
+function searchType(){
+     let array = data.pokemon;
+     let x = document.getElementById("typeSelect").value;
+     console.log(x);
+     console.log("hola");
 
+     let filterType = array.filter(pokemon => pokemon.type.includes(x));
+     console.log(filterType);
 
+     document.getElementById("pokemon_list").innerHTML = pokemonList(filterType);
+   
+     // for (let i = 0; i < array.length; i++) {
+     //   if (x === array[i].type) {
+     //      document.getElementById(array[i].num).style.display = "block";
+     //   } 
+     // }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+document.getElementById("typeSelect").addEventListener("change", searchType);
 
 
 // const dataPokemon = data.pokemon;
