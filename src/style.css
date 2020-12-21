@@ -141,6 +141,10 @@
     width: 10%;
 }
 
+.buttons_container{
+    text-align: center;
+}
+
 .btnorder1{
     background-color:#FF0000; 
     border: none;
@@ -148,11 +152,10 @@
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-   
     font-size: 16px;
-    
     justify-content: center;
 }
+
 .btnorder2{
     background-color:#3B4CCA; 
     border: none;
@@ -160,14 +163,11 @@
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    
     font-size: 16px;
-    
     justify-content: center;
 }
-.contenedorBtns{
-    text-align: center;
-}
+
+
 
 
 
