@@ -54,6 +54,24 @@ function searchType(){
      let filterType = array.filter(pokemon => pokemon.type.includes(x));
      console.log(filterType);
 
+     document.getElementById("orderAZ").addEventListener("click", function alphabeticalOrderA(){
+          let array = filterType;
+          let filterOrderA = array.sort((a, b) => {
+               return a.name > b.name ? 1 : -1 ;
+          });
+          console.log(filterOrderA);
+          document.getElementById("pokemon_list").innerHTML = pokemonList(filterOrderA);
+     });
+
+     document.getElementById("orderZA").addEventListener("click", function alphabeticalOrderA(){
+          let array = filterType;
+          let filterOrderZ = array.sort((a, b) => {
+               return a.name < b.name ? 1 : -1 ;
+          });
+          console.log(filterOrderZ);
+          document.getElementById("pokemon_list").innerHTML = pokemonList(filterOrderZ);
+     });
+
      document.getElementById("pokemon_list").innerHTML = pokemonList(filterType);
 };
 
