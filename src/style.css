@@ -57,11 +57,10 @@
     padding: 10%;
     width: 380px;*/
     width: 220px;
-    height: 250px;
     box-shadow: 10px 10px 10px #3B4CCA;
 }
+
 #search_button{  
-    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -71,8 +70,7 @@
     top: 35%;
     padding: 10%;
     width: 380px;*/
-    width: 100px;
-    height: 20px;
+    width: 80px;
     box-shadow: 2px 2px 2px #3B4CCA;
 }
 
