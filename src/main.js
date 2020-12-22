@@ -1,7 +1,5 @@
 //import { example } from './data.js';
-// import data from './data/lol/lol.js';
-// import data from './data/rickandmorty/rickandmorty.js';
-
+//import data from './data.js';//
 import data from './data/pokemon/pokemon.js';
 
 document.getElementById("enter_button").addEventListener("click", function(){
@@ -38,13 +36,13 @@ document.getElementById("pokemon_list").innerHTML = pokemonList(data.pokemon);
 console.log(data.pokemon);
 
 
-document.getElementById("orderAZ").addEventListener("click", function(){
-     document.getElementById("pokemon_list").innerHTML = "";
-});
+// //document.getElementById("orderAZ").addEventListener("click", function(){
+//      document.getElementById("pokemon_list").innerHTML = "";
+// });
 
-document.getElementById("orderZA").addEventListener("click", function(){
-     document.getElementById("pokemon_list").innerHTML = "";
-});
+// document.getElementById("orderZA").addEventListener("click", function(){
+//      document.getElementById("pokemon_list").innerHTML = "";
+// });
 
 
 function searchType(){
@@ -57,15 +55,34 @@ function searchType(){
      console.log(filterType);
 
      document.getElementById("pokemon_list").innerHTML = pokemonList(filterType);
-   
-     // for (let i = 0; i < array.length; i++) {
-     //   if (x === array[i].type) {
-     //      document.getElementById(array[i].num).style.display = "block";
-     //   } 
-     // }
-}
+};
 
 document.getElementById("type_select").addEventListener("change", searchType);
+
+
+document.getElementById("orderAZ").addEventListener("click", function alphabeticalOrderA(){
+     let array = data.pokemon;
+     let filterOrderA = array.sort((a, b) => {
+          return a.name > b.name ? 1 : -1 ;
+     });
+     console.log(filterOrderA);
+     document.getElementById("pokemon_list").innerHTML = pokemonList(filterOrderA);
+             //document.getElementById("pokemon_list").innerHTML = "";
+          //    (pokemon => pokemon.name);
+});
+
+document.getElementById("orderZA").addEventListener("click", function alphabeticalOrderZ(){
+     let array = data.pokemon;
+     let filterOrderZ = array.sort((a, b) => {
+          return a.name < b.name ? 1 : -1 ;
+     });
+     console.log(filterOrderZ);
+     document.getElementById("pokemon_list").innerHTML = pokemonList(filterOrderZ);
+             //document.getElementById("pokemon_list").innerHTML = "";
+          //    (pokemon => pokemon.name);
+});
+
+// document.getElementById("type_select").addEventListener("change", searchType);
 
 
 // const dataPokemon = data.pokemon;
