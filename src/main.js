@@ -100,6 +100,66 @@ document.getElementById("orderZA").addEventListener("click", function alphabetic
           //    (pokemon => pokemon.name);
 });
 
+function filterLetter(){
+     let array = data.pokemon;
+     let text = document.getElementById("search_box").value.toLowerCase();
+     console.log(text);
+     let list = "";
+     
+     for(let pokemon of array){
+         let name = pokemon.name.toLowerCase();
+         if (name.indexOf(text) !== -1){
+            
+         }
+     return list;
+     } 
+};
+     document.getElementById("search_box").addEventListener("keyup", filterLetter);
+     document.getElementById("pokemon_list").innerHTML += pokemonList(filterLetter);
+
+     // array.filter(pokemon => pokemon.type.includes(x));
+     // console.log(filterType);
+
+
+     
+
+     // document.getElementById("orderAZ").addEventListener("click", function alphabeticalOrderA(){
+     //      let array = filterType;
+     //      let filterOrderA = array.sort((a, b) => {
+     //           return a.name > b.name ? 1 : -1 ;
+     //      });
+     //      console.log(filterOrderA);
+     //      document.getElementById("pokemon_list").innerHTML = pokemonList(filterOrderA);
+     // });
+
+     // document.getElementById("orderZA").addEventListener("click", function alphabeticalOrderA(){
+     //      let array = filterType;
+     //      let filterOrderZ = array.sort((a, b) => {
+     //           return a.name < b.name ? 1 : -1 ;
+     //      });
+     //      console.log(filterOrderZ);
+     //      document.getElementById("pokemon_list").innerHTML = pokemonList(filterOrderZ);
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // document.getElementById("type_select").addEventListener("change", searchType);
 
 
