@@ -50,10 +50,10 @@ document.getElementById("orderZA").addEventListener("click", function alphabetic
 
 function searchType(){
      let array = data.pokemon;
-     let x = document.getElementById("type_select").value;
-     console.log(x);
+     let type = document.getElementById("type_select").value;
+     console.log(type);
 
-     let filterType = array.filter(pokemon => pokemon.type.includes(x));
+     let filterType = array.filter(pokemon => pokemon.type.includes(type));
      console.log(filterType);
      document.getElementById("pokemon_list").innerHTML = pokemonList(filterType);
 
@@ -88,6 +88,14 @@ function filterLetter(){
      })
      console.log(filterCharacter);
      document.getElementById("pokemon_list").innerHTML = pokemonList(filterCharacter);
+
+     if(filterCharacter == false){
+          //alert("Pokemon not found");
+          document.getElementById("pokemon_list").innerHTML = 
+          `<div class= "not_found">
+          <p>"Pokemon not found"</p>
+          </div>`
+     }
 }
 document.getElementById("search_box").addEventListener("keyup", filterLetter);
 
