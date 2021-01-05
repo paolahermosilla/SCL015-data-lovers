@@ -2,6 +2,9 @@
 
 import data from './data/pokemon/pokemon.js';
 import { filterData } from './data.js';
+import { sortDataAZ } from './data.js';
+import { sortDataZA } from './data.js';
+import { search } from './data.js';
 
 document.getElementById("enter_button").addEventListener("click", function(){
      document.getElementById("page_one").style.display = "none";
@@ -30,22 +33,16 @@ document.getElementById("pokemon_list").innerHTML = pokemonList(data.pokemon);
 console.log(data.pokemon);
 
 
-document.getElementById("orderAZ").addEventListener("click", function alphabeticalOrderA(){
+document.getElementById("orderAZ").addEventListener("click", function alphabeticalOrderAZ(){
      let array = data.pokemon;
-     // let filterOrderA = array.sort((a, b) => {
-     //      return a.name > b.name ? 1 : -1 ;
-     // });
-     console.log(filterOrderA);
-     document.getElementById("pokemon_list").innerHTML = pokemonList(filterOrderA);
+     
+     document.getElementById("pokemon_list").innerHTML = pokemonList(sortDataAZ(array));
 });
 
-document.getElementById("orderZA").addEventListener("click", function alphabeticalOrderZ(){
+document.getElementById("orderZA").addEventListener("click", function alphabeticalOrderZA(){
      let array = data.pokemon;
-     // let filterOrderZ = array.sort((a, b) => {
-     //      return a.name < b.name ? 1 : -1 ;
-     // });
-     console.log(filterOrderZ);
-     document.getElementById("pokemon_list").innerHTML = pokemonList(filterOrderZ);
+    
+     document.getElementById("pokemon_list").innerHTML = pokemonList(sortDataZA(array));
 });
 
 
@@ -54,26 +51,18 @@ function searchType(){
      let typePokemon = document.getElementById("type_select").value;
      console.log(typePokemon);
 
-     // let filterType = array.filter(pokemon => pokemon.type.includes(typePokemon));
-     //console.log(filterType);
      document.getElementById("pokemon_list").innerHTML = pokemonList(filterData(array, typePokemon));
 
-     document.getElementById("orderAZ").addEventListener("click", function alphabeticalOrderA(){
+     document.getElementById("orderAZ").addEventListener("click", function alphabeticalOrderAZ(){
           // let array = filterType;
-          // let filterOrderA = array.sort((a, b) => {
-          //      return a.name > b.name ? 1 : -1 ;
-          // });
-          console.log(filterOrderA);
-          document.getElementById("pokemon_list").innerHTML = pokemonList(filterOrderA);
+          
+          document.getElementById("pokemon_list").innerHTML = pokemonList(sortDataAZ(filterData));
      });
-
-     document.getElementById("orderZA").addEventListener("click", function alphabeticalOrderA(){
-          // let array = filterType;
-          // let filterOrderZ = array.sort((a, b) => {
-          //      return a.name < b.name ? 1 : -1 ;
-          // });
-          console.log(filterOrderZ);
-          document.getElementById("pokemon_list").innerHTML = pokemonList(filterOrderZ);
+     
+     document.getElementById("orderZA").addEventListener("click", function alphabeticalOrderZA(){
+          let array = filterType;
+          
+          document.getElementById("pokemon_list").innerHTML = pokemonList(sortDataZA(array));
      });
 }
 document.getElementById("type_select").addEventListener("change", searchType);
@@ -84,14 +73,9 @@ function filterLetter(){
      let text = document.getElementById("search_box").value.toLowerCase();
      console.log(text);
 
-     let filterCharacter = array.filter((character) => {
-          return character.name.includes(text);
-     })
-     console.log(filterCharacter);
-     document.getElementById("pokemon_list").innerHTML = pokemonList(filterCharacter);
+     document.getElementById("pokemon_list").innerHTML = pokemonList(search(array, text));
 
-     if(filterCharacter == false){
-          //alert("Pokemon not found");
+     if(search(array, text) == false){
           document.getElementById("pokemon_list").innerHTML = 
           `<div class= "not_found">
           <p>"Pokemon not found"</p>
