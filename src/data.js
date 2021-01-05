@@ -2,7 +2,6 @@ export const filterData = (array, typePokemon) => {
     const filterType = array.filter(pokemon => {
       return pokemon.type.includes(typePokemon);
     });
-    console.log(filterType)
     return filterType;
 };
 
@@ -10,7 +9,7 @@ export const sortDataAZ = (array) => {
     const filterOrderAZ = array.sort((a, b) => {
       return a.name > b.name ? 1 : -1 ;
     });
-     return filterOrderAZ;
+    return filterOrderAZ;
 };
 
 export const sortDataZA = (array) => {
