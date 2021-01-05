@@ -32,15 +32,13 @@ console.log(data.pokemon);
 
 
 document.getElementById("orderAZ").addEventListener("click", function alphabeticalOrderAZ(){
-     let array = data.pokemon;
-     
-     document.getElementById("pokemon_list").innerHTML = pokemonList(sortDataAZ(array));
+    let array = data.pokemon;
+    document.getElementById("pokemon_list").innerHTML = pokemonList(sortDataAZ(array));
 });
 
 document.getElementById("orderZA").addEventListener("click", function alphabeticalOrderZA(){
-     let array = data.pokemon;
-    
-     document.getElementById("pokemon_list").innerHTML = pokemonList(sortDataZA(array));
+    let array = data.pokemon;
+    document.getElementById("pokemon_list").innerHTML = pokemonList(sortDataZA(array));
 });
 
 
@@ -52,15 +50,11 @@ function searchType(){
      document.getElementById("pokemon_list").innerHTML = pokemonList(filterData(array, typePokemon));
 
      document.getElementById("orderAZ").addEventListener("click", function alphabeticalOrderAZ(){
-          // let array = filterType;
-          
-          document.getElementById("pokemon_list").innerHTML = pokemonList(sortDataAZ(filterData));
+          document.getElementById("pokemon_list").innerHTML = pokemonList(sortDataAZ(filterData(array, typePokemon)));
      });
      
      document.getElementById("orderZA").addEventListener("click", function alphabeticalOrderZA(){
-          let array = filterType;
-          
-          document.getElementById("pokemon_list").innerHTML = pokemonList(sortDataZA(array));
+          document.getElementById("pokemon_list").innerHTML = pokemonList(sortDataZA(filterData(array, typePokemon)));
      });
 }
 document.getElementById("type_select").addEventListener("change", searchType);
