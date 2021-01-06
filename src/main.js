@@ -20,7 +20,7 @@ function pokemonList(array){
      for(let i = 0; i < array.length; i++){//agregamos el id para poder identificarlo luego
           list += `<div class= "cards" id="${array[i].num}"> 
           <img src="${array[i].img}">
-          <p><span>${array[i].num}</span>: ${array[i].name}</p>
+          <p><span>${array[i].num}</span>: ${array[i].name.toUpperCase()}</p>
           <p>Type: ${array[i].type}</p>
           <p><span>Size: ${array[i].size.height}</span>, ${array[i].size.weight}</p>
           </div>`

@@ -1,23 +1,41 @@
-import { example, anotherExample } from '../src/data.js';
+import { filterData, sortDataAZ, sortDataZA, search } from '../src/data.js';
 
-
-describe('example', () => {
+describe('filterData', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filterData).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
+  // it('returns `example`', () => {
+  //   expect(example()).toBe('example');
+  // });
 });
 
-
-describe('anotherExample', () => {
+describe('sortDataAZ', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof sortDataAZ).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  // it('returns `example`', () => {
+  //   expect(example()).toBe('example');
+  // });
+});
+
+describe('sortDataZA', () => {
+  it('is a function', () => {
+    expect(typeof sortDataZA).toBe('function');
   });
+
+  // it('returns `example`', () => {
+  //   expect(example()).toBe('example');
+  // });
+});
+
+describe('search', () => {
+  it('is a function', () => {
+    expect(typeof search).toBe('function');
+  });
+
+  // it('returns `example`', () => {
+  //   expect(example()).toBe('example');
+  // });
 });
