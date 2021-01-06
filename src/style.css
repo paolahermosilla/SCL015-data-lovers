@@ -7,6 +7,7 @@
     background-image: url(img/Pokemon_Wallpaper05.jpg);
     background-repeat: round;
     width: 100%;
+    height: 100vh;
 }
 
 #page_two {
@@ -35,7 +36,7 @@
     /*position: absolute;*/
     /*width: 55%;
     height: 100%;*/
-    margin-right: 15%;
+    margin-right: 35%;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -63,7 +64,8 @@
 
 #footer img{
     width: 100%;
-    margin-bottom: -7%;
+    text-align: center;
+    padding: 13% 0% 4% 0% ;
     /*position: absolute;
     /*padding-top: 3%;
     padding-bottom: 5%;
