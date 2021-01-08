@@ -58,7 +58,7 @@
     top: 35%;
     padding: 10%;
     width: 380px;*/
-    width: 220px;
+    width: 300px;
     box-shadow: 10px 10px 10px #3B4CCA;
 }
 
@@ -156,6 +156,7 @@
 #pokemon_list{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal ;
@@ -174,7 +175,6 @@
     margin: 1.5%;
     border: 4px solid #3B4CCA;
     border-radius: 15%;
-    width: 10%;
 }
 
 .not_found{
@@ -187,4 +187,55 @@
     color: #FFDE00;
     text-shadow: 0 0 0.5em rgb(11, 7, 250), 0 0 0.5em #2836ff,
             0 0 0.5em rgb(0, 8, 248)
+}
+
+@media screen and (max-width: 450px) {
+    .intro{
+        flex-wrap: wrap;
+    }
+
+    .intro_text{
+        margin-bottom: 40px;
+    }
+
+    .welcome_text{
+        margin-right: 5%;
+        margin-left: 5%;
+        font-size: 120%;
+    }
+
+    #enter_button{
+        background-size: contain;
+        height: 200px;
+        width: 150px;
+    }
+
+    #logo1 img{
+        margin: 15%;
+        margin-top: 12%;
+        margin-bottom: 10%;
+        width: 70%;
+    }
+
+    #footer img{
+        margin-top: 0%;
+    }
+
+    #logo2 img{
+        margin-left: 0%;
+        width: 85%;
+    }
+
+    .second_text{
+        width: 75%;
+        font-size: 90%;
+    }
+
+    .search_box{
+        width: 25%;
+    }
+
+    .select_type{
+        width: 25%;
+    }
 }
