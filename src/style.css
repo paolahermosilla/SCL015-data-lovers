@@ -193,6 +193,13 @@
 }
 
 @media screen and (max-width: 450px) {
+    #logo1 img{
+        margin: 15%;
+        margin-top: 15%;
+        margin-bottom: 12%;
+        width: 70%;
+    }
+
     .intro{
         flex-wrap: wrap;
         padding: 9%;
@@ -213,13 +220,6 @@
         height: 200px;
         width: 150px;
         margin-right: 26%;
-    }
-
-    #logo1 img{
-        margin: 15%;
-        margin-top: 15%;
-        margin-bottom: 12%;
-        width: 70%;
     }
 
     #footer img{
@@ -248,3 +248,58 @@
         width: 25%;
     }
 }
+
+@media screen and (max-height: 700px) {
+    #logo1 img{
+        margin: 35%;
+        margin-top: 2%;
+        margin-bottom: 3%;
+        width: 35%;
+    }
+
+    .intro{
+        padding: 0%;
+    }
+
+    .intro_text{
+        margin-bottom: 30px;
+    }
+
+    .welcome_text{
+        margin-right: 10%;
+        margin-left: 25%;
+        font-size: 130%;
+        line-height: 175%;
+    }
+
+    #enter_button{
+        background-size: contain;
+        height: 150px;
+        width: 187px;
+        margin-right: 20%;
+    }
+
+    #footer img{
+        margin-top: 2%;
+    }
+
+    #page_two {
+        padding-bottom: 16%;
+    }
+
+    .search_box{
+        width: 30%;
+    }
+
+    .select_type{
+        width: 10%;
+    }
+}
+
+/* @media screen and (max-height: 1450px){
+    HACER TABLET AQUÍ!
+} */
+
+/* Pantalla Paola: 1280 x 1024
+Pantalla Cecilia: 1280 x 578
+Pantalla iPad Pro: 1024 x 1366*/
