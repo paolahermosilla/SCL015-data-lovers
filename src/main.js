@@ -70,7 +70,7 @@ function filterLetter(){
      if(search(array, text) == false){
           document.getElementById("pokemon_list").innerHTML = 
           `<div class= "not_found">
-          <p>"Pokemon not found"</p>
+          <p>"Pokémon not found"</p>
           </div>`
      }
 }
