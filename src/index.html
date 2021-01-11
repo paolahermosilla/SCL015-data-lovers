@@ -22,10 +22,9 @@
     <!--Div to contain welcome text and start button-->
     <div class="intro">
       <div class="intro_text">  
-      <p class="welcome_text"> Welcome, Pokémon Master!</p>
-      <p class="welcome_text">If you are a Pokémon Go fan, 
-      this is the best complement for you. Here you can find info about your Pokémon, 
-      so you will become the best Master in history...</p>
+        <p class="welcome_text"> Welcome, Pokémon Master!</p>
+        <p class="welcome_text">If you are a Pokémon Go fan, this is the best complement for you. 
+          Here you can find info about your Pokémon, so you will become the best Master in history...</p>
       </div>
       <button type="button" id="enter_button"></button>
     </div>
@@ -55,35 +54,34 @@
       
       <!--Buttons: A-Z order, Z-A order, search bar and filter type button-->
       <div class="button_container">
-          <button id="orderAZ" class="order_button">A-Z</button>
-          <button id="orderZA" class="order_button">Z-A</button>
-          <input type="text" placeholder="Search" id="search_box" class="search_box"/>
-          <select id="type_select" class="select_type" >
-            <option value="0" selected disabled>Types</option>
-            <option value="normal">Normal</option>
-            <option value="fire">Fire</option>
-            <option value="water">Water</option>
-            <option value="grass">Grass</option>
-            <option value="electric">Electric</option>
-            <option value="ice">Ice</option>
-            <option value="fighting">Fighting</option>
-            <option value="poison">Poison</option>
-            <option value="ground">Ground</option>
-            <option value="flying">Flying</option>
-            <option value="psychic">Psychic</option>
-            <option value="bug">Bug</option>
-            <option value="rock">Rock</option>
-            <option value="ghost">Ghost</option>
-            <option value="dragon">Dragon</option>
-            <option value="dark">Dark</option>
-            <option value="steel">Steel</option>
-            <option value="fairy">Fairy</option>
-          </select>
+        <button id="orderAZ" class="order_button">A-Z</button>
+        <button id="orderZA" class="order_button">Z-A</button>
+        <input type="text" placeholder="Search" id="search_box" class="search_box"/>
+        <select id="type_select" class="select_type" >
+          <option value="0" selected disabled>Types</option>
+          <option value="normal">Normal</option>
+          <option value="fire">Fire</option>
+          <option value="water">Water</option>
+          <option value="grass">Grass</option>
+          <option value="electric">Electric</option>
+          <option value="ice">Ice</option>
+          <option value="fighting">Fighting</option>
+          <option value="poison">Poison</option>
+          <option value="ground">Ground</option>
+          <option value="flying">Flying</option>
+          <option value="psychic">Psychic</option>
+          <option value="bug">Bug</option>
+          <option value="rock">Rock</option>
+          <option value="ghost">Ghost</option>
+          <option value="dragon">Dragon</option>
+          <option value="dark">Dark</option>
+          <option value="steel">Steel</option>
+          <option value="fairy">Fairy</option>
+        </select>
       </div>
 
       <!--Container for every Pokémon card-->
-      <div id="pokemon_list">
-      </div>
+      <div id="pokemon_list"></div>
     </section>
 
     <script src="main.js" type="module"></script>

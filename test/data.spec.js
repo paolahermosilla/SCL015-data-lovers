@@ -11,7 +11,7 @@ describe('filterData', () => {
    });
 });
 
- describe('sortDataAZ', () => {
+describe('sortDataAZ', () => {
    const pokemon = [{"name": "metapod", "type": ["bug"]}, {"name": "ditto", "type": ["normal"]}, {"name": "voltorb", "type": ["electric"]}];
    it('is a function', () => {
      expect(typeof sortDataAZ).toBe('function');

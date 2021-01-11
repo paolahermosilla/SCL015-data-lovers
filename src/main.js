@@ -34,7 +34,6 @@ function pokemonList(array){
      return list;
 }
 document.getElementById("pokemon_list").innerHTML = pokemonList(data.pokemon);
-console.log(data.pokemon);
 
 
 // function that orders all 251 Pokémon in alphabetical order (A to Z)
@@ -54,7 +53,6 @@ document.getElementById("orderZA").addEventListener("click", function alphabetic
 function searchType(){
      let array = data.pokemon;
      let typePokemon = document.getElementById("type_select").value;
-     console.log(typePokemon);
 
      document.getElementById("pokemon_list").innerHTML = pokemonList(filterData(array, typePokemon));
 
@@ -75,7 +73,6 @@ document.getElementById("type_select").addEventListener("change", searchType);
 function filterLetter(){
      let array = data.pokemon;
      let text = document.getElementById("search_box").value.toLowerCase();
-     console.log(text);
 
      document.getElementById("pokemon_list").innerHTML = pokemonList(search(array, text));
 
